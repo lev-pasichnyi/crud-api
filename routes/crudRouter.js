@@ -21,6 +21,9 @@ crudRouter.post('/', jsonParser, crud.createOne)
 // update whole object in db by it's id number
 crudRouter.put('/:id', jsonParser, crud.updateOne)
 
+// add some info to the object by id
+crudRouter.patch('/:id', jsonParser, crud.patchByID)
+
 // delete an object from db by ID number
 crudRouter.delete('/:id', crud.deleteOne)
 

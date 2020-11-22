@@ -5,6 +5,7 @@
 * GET api/:id - get an object by ID from mongoDB collection
 * POST api/ + body (see down below) - create new object in MongoDB with validation and data model (crud.js)
 * PUT api/:id - change whole DB object with given ID number
+* PATCH api/:id -  add information for the DB object with given ID number
 * DELETE api/:id - delete object from DB by ID number
  
 ## Install and start http server
@@ -14,9 +15,9 @@
 
 ```
 {
-    "firstName": "Lev",
-    "lastName": "Pasichnyi",
-    "login": "Cool - password",
+  "firstName": "Lev",
+  "lastName": "Pasichnyi",
+  "login": "Cool - password",
 	"workPhone" : "0508564589",
 	"workEmail" : "xxx@gmail.com",
 	"role": "engineer",
