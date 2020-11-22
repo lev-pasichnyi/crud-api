@@ -6,6 +6,13 @@ const app = express()
 import crudRouter from "./routes/crudRouter.js";
 app.use("/api", crudRouter);
 
+// page 404 implementation
+import path from 'path'
+
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(path.resolve(), 'views', '404.html'));
+})
+
 // if .env not present then listen on port 5000
 const PORT = process.env.PORT || "5000";
 
